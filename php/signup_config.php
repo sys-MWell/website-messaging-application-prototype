@@ -1,11 +1,12 @@
 <?php
     session_start();
     include_once "config.php";
-    // POST class detail parameters
+    // retrieve data from userdetails class - form data
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
     $lname = mysqli_real_escape_string($conn, $_POST['lname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+
 
     // check if class details are empty or not
     if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
@@ -38,6 +39,7 @@
                         
                         // Hash password
                         $hash = md5($password);
+
 
                         $sql_insert = mysqli_query($conn, "INSERT INTO users (unique_ID, first_name, last_name, email, password, profile_img, status)
                                                     VALUES ({$random_id}, '{$fname}', '{$lname}', '{$email}', '{$hash}', '{$new_img_name}', '{$status}')");

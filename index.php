@@ -30,20 +30,20 @@
                         <div class="name-details">
                             <div class="field input">
                                 <label>First name</label>
-                                <input type="text" name="fname" placeholder="Enter first name" required autocomplete="off">
+                                <input type="text" name="fname" placeholder="Enter first name" required>
                             </div>
                             <div class="field input">
                                 <label>Last name</label>
-                                <input type="text" name="lname" placeholder="Enter last name" required autocomplete="off">
+                                <input type="text" name="lname" placeholder="Enter last name" required>
                             </div>
                         </div>
                         <div class="field input">
                             <label>Email address</label>
-                            <input type="text" name="email" placeholder="Enter email" required autocomplete="off">
+                            <input type="text" name="email" placeholder="Enter email" required>
                         </div>
                         <div class="field input">
                             <label>Password</label>
-                            <input type="password" name="password" placeholder="Enter password" required autocomplete="off">
+                            <input type="password" name="password" placeholder="Enter password" required>
                             <i class="fas fa-eye"></i>
                         </div>
                         <div class="field image">
@@ -60,7 +60,7 @@
         </div>
         <!-- JS for hide password functionality -->
         <script src="javascript/pass-show-hide.js"></script>
-        <script type="module" src="javascript/signup.js"></script>
+        <script src="javascript/signup.js"></script>
 
     </body>
 </html>

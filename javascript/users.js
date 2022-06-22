@@ -10,6 +10,68 @@ searchBtn.onclick = ()=>{
     searchBtn.classList.toggle("active");
 }
 
+// Private chat class
+class PrivateChat
+{
+    constructor(messageid, incominguserid, outgoinguserid, messageinput)
+    {
+        this.MessageId = messageid;
+        this.IncomingUserId = incominguserid;
+        this.OutgoingUserId = outgoinguserid;
+        this.MessageInput = messageinput;
+    }
+
+    getPrivateChatMessageId()
+    {
+        return this.MessageId;
+    }
+
+    getPrivateChatIncomingUserId()
+    {
+       return this.IncomingUserId;
+    }
+    
+    getPrivateChatOutgoingUserId()
+    {
+        return this.OutgoingUserId;
+    }
+
+    getPrivateChatMessageInput()
+    {
+        return this.MessageInput;
+    }
+}
+
+// UserTags class
+class UserTags
+{   
+    TagId;
+    UniqueUserId;
+    Tags;
+
+    constructor(tagid, uniqueuserid, tags)
+    {
+        this.TagId = tagid;
+        this.UniqueUserId = uniqueuserid;
+        this.Tags = tags;
+    }
+
+    getDiscussionChatId()
+    {
+        return this.TagId;
+    }
+
+    getDiscussionsUserId()
+    {
+        return this.UniqueUserId;
+    }
+
+    getDiscussionMessageInput()
+    {
+        return this.Tags;
+    } 
+}
+
 // When searchbar is used (user presses any key)
 searchBar.onkeyup = ()=>{
     let searchTerm = searchBar.value;

@@ -1,5 +1,32 @@
 // JS for slogin page - login.php
 
+// Class user requirements
+
+class UserRequirements
+{
+    constructor(uniqueuserid, email, password)
+    {
+        this.UniqueUserId = uniqueuserid;
+        this.Email = email;
+        this.Password = password;
+    }
+
+    getUserRequirementsUnqiueId()
+    {
+        return this.UniqueUserId;
+    }
+
+    getUserRequirementsEmail()
+    {
+        return this.Email;
+    }
+
+    getUserRequirementsPassword()
+    {
+        return this.Password;
+    }
+}
+
 const form = document.querySelector(".login form"),
 continueBtn = form.querySelector(".button input"),
 errorText = form.querySelector(".error-txt");
@@ -32,5 +59,6 @@ continueBtn.onclick = ()=>{
     }
     // we have to send the form data through ajax to php
     let formData = new FormData(form); // new formData object
+    let userRequirements = new UserRequirements(null, formData[0], formData[1]);
     xhr.send(formData); // send form data to php
 }

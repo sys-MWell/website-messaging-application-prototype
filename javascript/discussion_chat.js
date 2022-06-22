@@ -3,6 +3,36 @@ inputField = form.querySelector(".input-field"),
 sendBtn = form.querySelector("button"),
 chatBox = document.querySelector(".chat-box");
 
+// Discussion class
+class Discussion
+{
+    UniqueChatId;
+    UniqueUserId;
+    MessageInput;
+
+    constructor(uniquechatid, uniqueuserid, messageinput)
+    {
+        this.UniqueChatId = uniquechatid;
+        this.UniqueUserId = uniqueuserid;
+        this.MessageInput = messageinput;
+    }
+
+    getDiscussionChatId()
+    {
+        return this.UniqueChatId;
+    }
+
+    getDiscussionsUserId()
+    {
+        return this.UniqueUserId;
+    }
+
+    getDiscussionMessageInput()
+    {
+        return this.MessageInput;
+    }
+}
+
 form.onsubmit = (e)=>{
     e.preventDefault(); // Preventsing form from submitting
 }
@@ -14,6 +44,7 @@ sendBtn.onclick = ()=>{
     xhr.onload = ()=>{
         if(xhr.readyState === XMLHttpRequest.DONE){
             if(xhr.status === 200){
+                sendResponse = new Discussion(null, formData, inputField)
                 inputField.value = ""; // When message sends, input box is cleared
                 $("#myTextarea").data("emojioneArea").setText('');
                 scrollToBottom();

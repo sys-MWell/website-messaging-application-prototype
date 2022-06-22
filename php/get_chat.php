@@ -1,22 +1,4 @@
 <?php
-    define("encryption_method", "AES-128-CBC");
-    define("key", "your_amazing_key_here");
-
-    function decrypt($data) {
-        $key = key;
-        $c = base64_decode($data);
-        $ivlen = openssl_cipher_iv_length($cipher = encryption_method);
-        $iv = substr($c, 0, $ivlen);
-        $hmac = substr($c, $ivlen, $sha2len = 32);
-        $ciphertext_raw = substr($c, $ivlen + $sha2len);
-        $original_plaintext = openssl_decrypt($ciphertext_raw, $cipher, $key, $options = OPENSSL_RAW_DATA, $iv);
-        $calcmac = hash_hmac('sha256', $ciphertext_raw, $key, $as_binary = true);
-        if (hash_equals($hmac, $calcmac))
-        {
-            return $original_plaintext;
-        }
-    }
-
     session_start();
     if(isset($_SESSION['unique_ID'])){
         include_once "config.php";
@@ -36,7 +18,7 @@
                 if($query_data['outgoing_user_ID'] === $outgoing_user_ID){
                     $message .= '<div class="chat outgoing">
                                     <div class="details">
-                                        <p>'. decrypt($query_data['message_input']) .'</p>
+                                        <p>'. $query_data['message_input'] .'</p>
                                     </div>
                                 </div>';
                 }
@@ -45,7 +27,7 @@
                     $message .= '<div class="chat incoming">
                                     <img src="php/images/'. $query_data['profile_img'] .'" alt="">
                                     <div class="details">
-                                        <p>'. decrypt($query_data['message_input']) .'</p>
+                                        <p>'. $query_data['message_input'] .'</p>
                                     </div>
                                 </div>';
                 }
@@ -57,4 +39,4 @@
     {
         header("../login.php");
     }
-?> 
+?>

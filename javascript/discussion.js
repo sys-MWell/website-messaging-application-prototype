@@ -6,6 +6,55 @@ form.onsubmit = (e)=>{
     e.preventDefault(); // Preventing form from submitting
 }
 
+class DiscussionDetails
+{
+    constructor(chatid, uniquechatid, title, description, status, tags, icon)
+    {
+        this.ChatId = chatid;
+        this.UniqueChatId = uniquechatid;
+        this.Title = title;
+        this.Description = description;
+        this.Status = status;
+        this.Tags = tags;
+        this.Icon = icon;
+    }
+
+    getDiscussionDetailsChatId()
+    {
+        return this.ChatId;
+    }
+
+    getDiscussionDetailsUniqueChatId()
+    {
+        return this.Unique;
+    }
+
+    getDiscussionDetailsTitle()
+    {
+        return this.Title;
+    }
+
+    getDiscussionDetailsDescription()
+    {
+        return this.Description;
+    }
+
+    getDiscussionDetailsStatus()
+    {
+        return this.Status;
+    }
+
+    getDiscussionDetailsTags()
+    {
+        return this.Tags;
+    }
+
+    getDiscussionDetailsIcon()
+    {
+        return this.Icon;
+    }
+}
+
 // Function to only accept certain characters
 function onlyLettersAndNumbers(str){
   return /^[A-Za-z0-9,]*$/.test(str);
