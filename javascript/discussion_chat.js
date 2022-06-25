@@ -3,36 +3,6 @@ inputField = form.querySelector(".input-field"),
 sendBtn = form.querySelector("button"),
 chatBox = document.querySelector(".chat-box");
 
-// Discussion class
-class Discussion
-{
-    UniqueChatId;
-    UniqueUserId;
-    MessageInput;
-
-    constructor(uniquechatid, uniqueuserid, messageinput)
-    {
-        this.UniqueChatId = uniquechatid;
-        this.UniqueUserId = uniqueuserid;
-        this.MessageInput = messageinput;
-    }
-
-    getDiscussionChatId()
-    {
-        return this.UniqueChatId;
-    }
-
-    getDiscussionsUserId()
-    {
-        return this.UniqueUserId;
-    }
-
-    getDiscussionMessageInput()
-    {
-        return this.MessageInput;
-    }
-}
-
 form.onsubmit = (e)=>{
     e.preventDefault(); // Preventsing form from submitting
 }

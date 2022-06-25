@@ -1,43 +1,4 @@
 // JS for signup page - index.php
-
-// Class - UserDetails
-class UserDetails
-{
-    constructor(uniqueuserid, firstname, lastname, email, tags)
-    {
-        this.UniqueUserId = uniqueuserid;
-        this.FirstName = firstname;
-        this.LastName = lastname;
-        this.Email = email;
-        this.Tags = tags;
-    }
-
-    getUserDetailsUnqiueId()
-    {
-        return this.UniqueUserId;
-    }
-
-    getUserDetailsFirstName()
-    {
-        return this.FirstName;
-    }
-
-    getUserDetailsLastName()
-    {
-        return this.LastName;
-    }
-
-    getUserDetailsEmail()
-    {
-        return this.Email;
-    }
-
-    getUserDetailsTags()
-    {
-        return this.Tags;
-    }
-}
-
 // Collects data from form entries - index.php
 const form = document.querySelector(".signup form"),
 continueBtn = form.querySelector(".button input"),

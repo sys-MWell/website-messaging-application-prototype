@@ -10,38 +10,6 @@ searchBtn.onclick = ()=>{
     searchBtn.classList.toggle("active");
 }
 
-// Private chat class
-class PrivateChat
-{
-    constructor(messageid, incominguserid, outgoinguserid, messageinput)
-    {
-        this.MessageId = messageid;
-        this.IncomingUserId = incominguserid;
-        this.OutgoingUserId = outgoinguserid;
-        this.MessageInput = messageinput;
-    }
-
-    getPrivateChatMessageId()
-    {
-        return this.MessageId;
-    }
-
-    getPrivateChatIncomingUserId()
-    {
-       return this.IncomingUserId;
-    }
-    
-    getPrivateChatOutgoingUserId()
-    {
-        return this.OutgoingUserId;
-    }
-
-    getPrivateChatMessageInput()
-    {
-        return this.MessageInput;
-    }
-}
-
 // UserTags class
 class UserTags
 {   
