@@ -39,6 +39,7 @@ continueBtn.onclick = ()=>{
     let formData = new FormData(form); //new formData object
     xhr.send(formData); //send form data to php
   }
+  else
   {
     // Display appropriate error message
     data = "Tag contains invalid characters, must include 'A-Z', 'a-z', '0-9' or ','";
