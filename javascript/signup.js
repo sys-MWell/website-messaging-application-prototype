@@ -1,4 +1,4 @@
-// JS for signup page - index.php
+// JS for signup page - index.php0
 // Collects data from form entries - index.php
 const form = document.querySelector(".signup form"),
 continueBtn = form.querySelector(".button input"),
@@ -34,8 +34,5 @@ continueBtn.onclick = ()=>{
         }
     }
     // We have to send the form data through ajax to php
-    let formData = new FormData(form); // New formData object
-    // Assign data to user details class
-    let user = new UserDetails(null, formData, formData[1], formData[2], formData[3], null);
     xhr.send(formData); // Send form data to php
 }
