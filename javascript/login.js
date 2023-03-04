@@ -1,4 +1,4 @@
-// JS for slogin page - login.php
+// JS for login page - login.php
 
 // Class user requirements
 const form = document.querySelector(".login form"),
@@ -33,6 +33,5 @@ continueBtn.onclick = ()=>{
     }
     // we have to send the form data through ajax to php
     let formData = new FormData(form); // new formData object
-    let userRequirements = new UserRequirements(null, formData[0], formData[1]);
     xhr.send(formData); // send form data to php
 }

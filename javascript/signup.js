@@ -1,4 +1,4 @@
-// JS for signup page - index.php
+// JS for signup page - index.php0
 // Collects data from form entries - index.php
 const form = document.querySelector(".signup form"),
 continueBtn = form.querySelector(".button input"),
